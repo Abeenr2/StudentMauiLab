@@ -13,6 +13,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         InitData();
 
+
     }
     protected override void OnAppearing()
     {
