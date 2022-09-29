@@ -9,17 +9,19 @@
 
         </Grid.RowDefinitions>
         <Button Grid.Row="0" x:Name="btnAdd" Text="Lägg till ny" Clicked="btnAdd_Clicked" WidthRequest="150" HeightRequest="200"/>
-        <ListView x:Name="lstStudent"  Grid.Row="1" RowHeight="75">
+        <ListView x:Name="lstStudent"  Grid.Row="1" RowHeight="75" ItemTapped="lstStudent_ItemTapped"  ItemsSource="{Binding ModelClasses}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" Margin="6">
                         <Image Source="{Binding Image}" Margin="0,0,12,0"/>
                         <StackLayout Orientation="Vertical">
+                            
                             <Label Text="{Binding Name}" FontSize="Large" TextColor="White" />
                             <Label Text="{Binding Email}" FontSize="Small" TextColor="White" Margin="25,0,0,0"/>
-                        </StackLayout>
-                    </StackLayout>
+                            </StackLayout>
+                       
+                    </StackLayout>      
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

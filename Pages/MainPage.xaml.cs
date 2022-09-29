@@ -51,5 +51,32 @@ public partial class MainPage : ContentPage
         AddPage addpage = new AddPage();
         Navigation.PushAsync(addpage);
     }
+
+    //private void btnEdit_Clicked(object sender, EventArgs e)
+    //{
+    //    EditPage editPage = new EditPage();
+    //    Navigation.PushAsync(editPage);
+    //}
+
+
+    private void btnDelete_Clicked(object sender, EventArgs e)
+    {
+      
+
+        DeletePage deletePage = new DeletePage();
+        Navigation.PushAsync(deletePage);
+    }
+
+    private async void lstStudent_ItemTapped(object sender, ItemTappedEventArgs e)
+    {
+        if (e.Item == null)
+        {
+            return;
+        }
+        ModelClasses selectedStudent = (ModelClasses)e.Item;
+        var detailspage = new DetailsPage();
+        detailspage.BindingContext = selectedStudent;
+        await this.Navigation.PushAsync(detailspage);
+    }
 }
 

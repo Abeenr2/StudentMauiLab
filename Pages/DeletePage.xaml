@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StudentMauiLab.Pages.EditPage"
-             Title="EditPage">
+             x:Class="StudentMauiLab.Pages.DeletePage"
+             Title="DeletePage">
     <VerticalStackLayout Spacing="25" Margin="25">
         <Label 
             Text="student namen!"
              />
-        <Editor x:Name="txtName"/>
+        <!--<Editor x:Name="txtName"/>-->
         <Label 
             Text="Email!"
              />
-        <Editor x:Name="txtEmail"/>
-        <Button x:Name="Edit" Text="Spara Edit" Clicked="Edit_Clicked_1"/>
-       
+        <!--<Editor x:Name="txtEmail"/>-->
+        <Button x:Name="btnDelete" Text="Ta bort" Clicked="btnDelete_Clicked_1" />
+
     </VerticalStackLayout>
 </ContentPage>
